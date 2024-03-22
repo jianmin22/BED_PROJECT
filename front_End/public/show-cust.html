@@ -1,0 +1,431 @@
+<!-- Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ShowCust - Finbest</title>
+  <meta name="description" content="Description of the website" />
+  <meta property="og:title" content="ShowCust - Finbest" />
+  <meta property="og:description" content="Description of the website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <!--This is the head section-->
+  <!-- <style> ... </style> -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      const tmpToken = localStorage.getItem('token');
+      if (tmpToken == null) {
+        alert('You are not logged in, please login to access the page!\nRedirecting you to the login page...');
+        window.location.assign('http://localhost:3001/login.html')
+      }
+      const role = localStorage.getItem('role');
+      if (tmpToken != null && role != 'admin') {
+        alert('Error: You are not an admin');
+        window.location.assign('http://localhost:3001/home-for-cust.html')
+      }
+      if (tmpToken != null && role == 'admin') {
+        $.ajax({
+          headers: { 'authorization': 'Bearer ' + tmpToken },
+          url: "http://localhost:8081/allCust",
+          type: "GET",
+          contentType: "application/json;charset=utf-8",
+          success: function (data) {
+            if (data != null && data.length != 0) {
+              let divOutput = '';
+              for (let i = 0; i < data.length; i++) {
+                divOutput +=
+                  ` <div id="id" class="show-cust-feature-card">
+                  <h2 id="fullName" class="show-cust-text03">${data[i].first_name}&nbsp;${data[i].last_name}</h2>
+                  <span id="firstName" class="show-cust-text04">
+                    <span>First Name:&nbsp;${data[i].first_name}</span>
+                    <br />
+                  </span>
+                  <span id="lastName" class="show-cust-text07">
+                    <span>Last Name:&nbsp;${data[i].last_name}</span>
+                    <br />
+                  </span>
+                  <span id="email" class="show-cust-text10">
+                    <span>Email:&nbsp;${data[i].email}</span>
+                    <br />
+                  </span>
+                  <span id="address" class="show-cust-text13">
+                    <span>Address:&nbsp;${data[i].address}</span>
+                    <br />
+                  </span>
+                  <span id="address2" class="show-cust-text16">
+                    <span>Address2:&nbsp;${data[i].address2}</span>
+                    <br />
+                  </span>
+                  <span id="postalCode" class="show-cust-text19">
+                    <span>Postal Code:&nbsp;${data[i].postal_code}</span>
+                    <br />
+                  </span>
+                  <span id="phone" class="show-cust-text22">
+                    <span>Phone:&nbsp;${data[i].phone}</span>
+                    <br />
+                  </span>
+                </div>`
+
+              }
+              $('#custResults').html(divOutput);
+            } else {
+              let divOutput = `<div id="id" >
+                  <h3>-----No Results-----</h3>
+                        </div>`
+              $('#custResults').html(divOutput);
+            }
+          },
+          error: function (xhr, textStatus, errorThrow) {
+            alert(xhr.responseText);
+          }
+        })
+
+        $('#paymentDetails').click(function () {
+          window.location.assign('http://localhost:3001/admin-pay-detail.html')
+        })
+
+        $('#home').click(function () {
+          window.location.assign('http://localhost:3001/home-for-admin.html')
+        })
+
+        $('#modActors').click(function () {
+          window.location.assign('http://localhost:3001/show-to-modify-actors.html')
+        })
+
+        $('#addCustomer').click(function () {
+          window.location.assign('http://localhost:3001/add-cust.html')
+        })
+
+        $('#logout').click(function () {
+          window.localStorage.clear();
+          alert('Log Out Successfully!')
+          window.location.assign('http://localhost:3001/home.html')
+
+        })
+
+        $('#searchName').click(function () {
+          // retrieve the value from the text boxes
+          const custName = $('#custName').val();
+          if (custName.length == 0 || custName == null) {
+            alert('Please fill enter customer&apos;s name to search!');
+          } else {
+
+            const dataObj1 = {
+              cust_name: custName,
+            }
+            const data1 = JSON.stringify(dataObj1);
+
+            // send http request
+            $.ajax({
+              headers: { 'authorization': 'Bearer ' + tmpToken },
+              url: "http://localhost:8081/custByName",
+              type: "POST",
+              contentType: "application/json;charset=utf-8",
+              dataType: "json",
+              data: data1,
+              success: function (data) {
+                if (data != null && data.length != 0) {
+                  let divOutput = '';
+                  for (let i = 0; i < data.length; i++) {
+                    divOutput +=
+                      ` <div id="id" class="show-cust-feature-card">
+                  <h2 id="fullName" class="show-cust-text03">${data[i].first_name}&nbsp;${data[i].last_name}</h2>
+                  <span id="firstName" class="show-cust-text04">
+                    <span>First Name:&nbsp;${data[i].first_name}</span>
+                    <br />
+                  </span>
+                  <span id="lastName" class="show-cust-text07">
+                    <span>Last Name:&nbsp;${data[i].last_name}</span>
+                    <br />
+                  </span>
+                  <span id="email" class="show-cust-text10">
+                    <span>Email:&nbsp;${data[i].email}</span>
+                    <br />
+                  </span>
+                  <span id="address" class="show-cust-text13">
+                    <span>Address:&nbsp;${data[i].address}</span>
+                    <br />
+                  </span>
+                  <span id="address2" class="show-cust-text16">
+                    <span>Address2:&nbsp;${data[i].address2}</span>
+                    <br />
+                  </span>
+                  <span id="postalCode" class="show-cust-text19">
+                    <span>Postal Code:&nbsp;${data[i].postal_code}</span>
+                    <br />
+                  </span>
+                  <span id="phone" class="show-cust-text22">
+                    <span>Phone:&nbsp;${data[i].phone}</span>
+                    <br />
+                  </span>
+                </div>`
+
+                  }
+                  $('#custResults').html(divOutput);
+                } else {
+                  let divOutput = `<div id="id" >
+                  <h3>-----No Results-----</h3>
+                        </div>`
+                  $('#custResults').html(divOutput);
+                }
+              },
+              error: function (xhr, textStatus, errorThrow) {
+                alert(xhr.responseText);
+              }
+            })
+          }
+
+          return false; //prevent loading of the page
+        })
+
+        $('#searchCustId').click(function () {
+          // retrieve the value from the text boxes
+          const custId = $('#custId').val();
+          if (custId.length == 0 || custId == null) {
+            alert('Please fill enter customer&apos;s name to search!');
+          } else {
+            const dataObj2 = {
+              cust_id: custId,
+            }
+            const data2 = JSON.stringify(dataObj2);
+
+            // send http request
+            $.ajax({
+              headers: { 'authorization': 'Bearer ' + tmpToken },
+              url: "http://localhost:8081/custByID",
+              type: "POST",
+              contentType: "application/json;charset=utf-8",
+              dataType: "json",
+              data: data2,
+              success: function (data) {
+                if (data != null && data.length != 0) {
+                  let divOutput = '';
+                  for (let i = 0; i < data.length; i++) {
+                    divOutput +=
+                      ` <div id="id" class="show-cust-feature-card">
+                  <h2 id="fullName" class="show-cust-text03">${data[i].first_name}&nbsp;${data[i].last_name}</h2>
+                  <span id="firstName" class="show-cust-text04">
+                    <span>First Name:&nbsp;${data[i].first_name}</span>
+                    <br />
+                  </span>
+                  <span id="lastName" class="show-cust-text07">
+                    <span>Last Name:&nbsp;${data[i].last_name}</span>
+                    <br />
+                  </span>
+                  <span id="email" class="show-cust-text10">
+                    <span>Email:&nbsp;${data[i].email}</span>
+                    <br />
+                  </span>
+                  <span id="address" class="show-cust-text13">
+                    <span>Address:&nbsp;${data[i].address}</span>
+                    <br />
+                  </span>
+                  <span id="address2" class="show-cust-text16">
+                    <span>Address2:&nbsp;${data[i].address2}</span>
+                    <br />
+                  </span>
+                  <span id="postalCode" class="show-cust-text19">
+                    <span>Postal Code:&nbsp;${data[i].postal_code}</span>
+                    <br />
+                  </span>
+                  <span id="phone" class="show-cust-text22">
+                    <span>Phone:&nbsp;${data[i].phone}</span>
+                    <br />
+                  </span>
+                </div>`
+
+                  }
+                  $('#custResults').html(divOutput);
+                } else {
+                  let divOutput = `<div id="id" >
+                  <h3>-----No Results-----</h3>
+                        </div>`
+                  $('#custResults').html(divOutput);
+                }
+              },
+              error: function (xhr, textStatus, errorThrow) {
+                alert(xhr.responseText);
+              }
+            })
+          }
+
+          return false; //prevent loading of the page
+        })
+      }
+
+    })
+  </script>
+</head>
+
+<body>
+  <div>
+    <link href="./css/show-cust.css" rel="stylesheet" />
+    <div class="show-cust-container">
+      <div class="show-cust-container1">
+        <header data-thq="thq-navbar" class="show-cust-navbar-interactive">
+          <div data-thq="thq-navbar-nav" data-role="Nav" class="show-cust-desktop-menu">
+            <nav data-thq="thq-navbar-nav-links" data-role="Nav" class="show-cust-nav">
+              <button id="home" class="show-cust-button button">HOME</button>
+              <button id="modActors" class="show-cust-button1 button">
+                Modify Actors
+              </button>
+              <button id="addCust" class="show-cust-button2 button">
+                Add Customers
+              </button>
+              <button id="paymentDetails" class="show-cust-button3 button">
+                Past Payment Details
+              </button>
+              <button id="addCustomer" class="show-cust-button4 button">Add Customer</button>
+            </nav>
+          </div>
+          <div data-thq="thq-navbar-btn-group" class="show-cust-btn-group">
+            <button id="logout" class="show-cust-login button">LOGOUT</button>
+          </div>
+        </header>
+      </div>
+      <div class="show-cust-container2">
+        <div class="show-cust-container3">
+          <span class="show-cust-text">Enter Customer&apos;s Name: </span>
+        </div>
+        <input type="text" id="custName" class="show-cust-textinput input" />
+        <button id="searchName" class="show-cust-button5 button">SEARCH</button>
+        <div class="show-cust-container4">
+          <div class="show-cust-container5">
+            <span class="show-cust-text01">OR</span>
+            <span class="show-cust-text02">Enter Customer&apos;s ID: </span>
+          </div>
+          <input type="number" id="custId" class="show-cust-textinput1 input" />
+          <button id="searchCustId" class="show-cust-button6 button">SEARCH</button>
+        </div>
+      </div>
+      <div id="custResults">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

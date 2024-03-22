@@ -1,0 +1,308 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.add-cust-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.add-cust-text {
+  align-self: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.add-cust-feature-card {
+  width: 710px;
+  height: 1160px;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  align-self: center;
+  align-items: center;
+  border-color: var(--dl-color-gray-black);
+  border-width: 3px;
+  border-radius: 8px;
+  flex-direction: column;
+  margin-bottom: 90px;
+  box-shadow: 3px 3px 10px 10px #9e5858;
+
+}
+.add-cust-container01 {
+  width: 654px;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text03 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 10px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-textinput {
+  width: 540px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 10px;
+  text-align: left;
+  margin-right: 17px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1.5px;
+}
+.add-cust-container02 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text04 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-textinput1 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 28px;
+}
+.add-cust-container03 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text05 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-textinput2 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 30px;
+}
+.add-cust-container04 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text06 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.add-cust-textinput3 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 50px;
+}
+.add-cust-container05 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text07 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.add-cust-textinput4 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 30px;
+}
+.add-cust-container06 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text11 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-textinput5 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left:58px;
+}
+.add-cust-container07 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text14 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.add-cust-textinput14{
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 37px;
+}
+.add-cust-text12 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-select1 {
+  width: 253.5px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 90px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1.6px;
+}
+.add-cust-select2 {
+  width: 253.5px;
+  height: 50px;
+  margin-top: 50px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1.6px;
+  border-left: 0px;
+}
+.add-cust-container08 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text13 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.add-cust-textinput6 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 75px;
+}
+.add-cust-container09 {
+  width: 654px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.add-cust-text17 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.add-cust-textinput7 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 70px;
+}
+
+.add-cust-textinput8 {
+  width: 507px;
+  height: 50px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 79px;
+}
+.add-cust-container10 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-self: center;
+  margin-top: 50px;
+  align-items: centez;
+  justify-content: center;
+}
+.add-cust-button {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.add-cust-button1 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+@media(max-width: 991px) {
+  .add-cust-feature-card {
+    width: 100%;
+  }
+}

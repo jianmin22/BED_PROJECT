@@ -1,0 +1,97 @@
+<div>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+  ></script>
+  <link href="./navbar.css" rel="stylesheet" />
+  <nav class="navbar-navbar">
+    <div class="navbar-desktop">
+      <div class="navbar-main">
+        <div class="navbar-branding">
+          <a href="index.html" class="navbar-navlink">
+            <img
+              alt="pastedImage"
+              src="/playground_assets/pastedimage-cx4wqj.svg"
+              class="navbar-finbest"
+            />
+          </a>
+        </div>
+        <div class="navbar-links">
+          <a href="index.html" class="link"><span>Features</span></a>
+          <a href="index.html" class="link"><span>How it works</span></a>
+          <a href="index.html" class="link"><span>Prices</span></a>
+          <a href="index.html" class="link"><span>Contact</span></a>
+        </div>
+      </div>
+      <div class="navbar-quick-actions">
+        <a href="index.html" class="link navbar-log-in">Log in</a>
+        <img
+          id="open-mobile-menu"
+          alt="pastedImage"
+          src="/playground_assets/pastedimage-8o98.svg"
+          class="navbar-hamburger-menu"
+        />
+      </div>
+    </div>
+    <div id="mobile-menu" class="navbar-mobile">
+      <div class="navbar-top">
+        <img
+          alt="image"
+          src="/playground_assets/pastedimage-cx4wqj.svg"
+          class="navbar-image"
+        />
+        <svg id="close-mobile-menu" viewBox="0 0 1024 1024" class="navbar-icon">
+          <path
+            d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+          ></path>
+        </svg>
+      </div>
+      <div class="navbar-links1">
+        <a href="index.html" class="navbar-navlink1"><span>Features</span></a>
+        <a href="index.html" class="navbar-navlink2">
+          <span>How it works</span>
+        </a>
+        <a href="index.html" class="navbar-navlink3"><span>Prices</span></a>
+        <a href="index.html" class="navbar-navlink4"><span>Contact</span></a>
+        <div class="navbar-buttons">
+          <a href="index.html" class="navbar-navlink5">
+            <div class="navbar-btn">
+              <span class="navbar-text"><span>Log in</span></span>
+            </div>
+          </a>
+          <a href="index.html" class="navbar-navlink6">
+            <div class="navbar-btn1">
+              <span class="navbar-text1"><span>Sign up</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <dangerous-html
+        html="<script>
+/*
+Mobile menu - Code Embed
+*/
+
+// Mobile menu
+const mobileMenu = document.querySelector('#mobile-menu')
+
+// Buttons
+const closeButton = document.querySelector('#close-mobile-menu')
+const openButton = document.querySelector('#open-mobile-menu')
+
+// On openButton click, set the mobileMenu position left to -100vw
+openButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(0%)'
+})
+
+// On closeButton click, set the mobileMenu position to 0vw
+closeButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(100%)'
+})
+</script>"
+      ></dangerous-html>
+    </div>
+  </nav>
+</div>

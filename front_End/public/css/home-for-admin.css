@@ -1,0 +1,319 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.home-for-admin-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.home-for-admin-container01 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home-for-admin-navbar-interactive {
+  width: 100%;
+  height: 124px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 2px;
+}
+.home-for-admin-desktop-menu {
+  display: flex;
+}
+.home-for-admin-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.home-for-admin-button {
+  color: #ffffff;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+  background-color: #9e5858;
+}
+.home-for-admin-button1 {
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+}
+.home-for-admin-button2 {
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+}
+.home-for-admin-button3 {
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+}
+.home-for-admin-btn-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-for-admin-login {
+  color: rgb(255, 255, 255);
+  height: var(--dl-size-size-small);
+  align-self: stretch;
+  text-align: center;
+  padding-top: 14px;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.home-for-admin-container02 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-for-admin-text {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+.home-for-admin-container03 {
+  width: 803px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+.home-for-admin-container04 {
+  flex: 0 0 auto;
+  width: 361px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home-for-admin-textinput {
+  width: var(--dl-size-size-xxlarge);
+  height: 53px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 80px;
+}
+.home-for-admin-container05 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home-for-admin-text01 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.home-for-admin-textinput1 {
+  width: 200px;
+  height: 53px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.home-for-admin-button4 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 56px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.home-for-admin-text02 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+.home-for-admin-container06 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-for-admin-container07 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.home-for-admin-container08 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-for-admin-text03 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+.home-for-admin-container09 {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-for-admin-select {
+  color: var(--dl-color-gray-black);
+  width: var(--dl-size-size-xxlarge);
+  height: 53px;
+  z-index: 100;
+  margin-top: 50px;
+  padding-top: 10px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1.5px;
+  padding-left: 10px;
+  border-radius: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: var(--dl-color-gray-white);
+}
+.home-for-admin-text04 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 15px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.home-for-admin-textinput2 {
+  width: 200px;
+  height: 53px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.home-for-admin-button5 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.home-for-admin-feature-card {
+  width: 777px;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  max-width: var(--dl-size-size-maxwidth);
+  margin-top: 30px;
+  align-items: flex-start;
+  margin-left: 50px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  margin-right: 50px;
+  border-radius: var(--dl-radius-radius-radius4);
+  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-for-admin-text05 {
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.home-for-admin-button6 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  align-self: flex-end;
+  font-style: normal;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.home-for-admin-text06 {
+  color: var(--dl-color-gray-700);
+}
+.home-for-admin-text09 {
+  color: var(--dl-color-gray-700);
+}
+@media(max-width: 767px) {
+  .home-for-admin-navbar-interactive {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .home-for-admin-desktop-menu {
+    display: none;
+  }
+  .home-for-admin-btn-group {
+    display: none;
+  }
+}
+@media(max-width: 479px) {
+  .home-for-admin-navbar-interactive {
+    padding: var(--dl-space-space-unit);
+  }
+  .home-for-admin-text05 {
+    font-style: normal;
+    font-weight: 600;
+  }
+}

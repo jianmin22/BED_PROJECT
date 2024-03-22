@@ -1,0 +1,132 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.add-actor-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.add-actor-text {
+  align-self: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.add-actor-feature-card {
+  width: 700px;
+  height: 330px;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  align-self: center;
+  align-items: center;
+  padding-top: 32px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 3px;
+border-radius: 8px;
+  flex-direction: column;
+  box-shadow: 10px 20px 30px #9e5858;
+}
+.add-actor-container1 {
+  width: 0px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.add-actor-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.add-actor-text3 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 30px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.add-actor-textinput {
+  width: 379px;
+  height: 46px;
+  align-self: flex-start;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+.add-actor-container3 {
+  width: 0px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.add-actor-container4 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.add-actor-text4 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.add-actor-textinput1 {
+  width: 379px;
+  height: 46px;
+  align-self: flex-start;
+  margin-top: 38px;
+  text-align: left;
+  margin-left: 25px;
+}
+.add-actor-container5 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.add-actor-button {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.add-actor-button1 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+@media(max-width: 991px) {
+  .add-actor-feature-card {
+    width: 100%;
+  }
+}

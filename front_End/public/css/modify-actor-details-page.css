@@ -1,0 +1,146 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.modify-actor-details-page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.modify-actor-details-page-feature-card {
+  width: 710px;
+  height: 510px;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  align-self: center;
+  align-items: center;
+  padding-top: 32px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 3px;
+  border-radius: 8px;
+  flex-direction: column;
+  margin-top: 45px;
+  box-shadow: 3px 3px 10px 10px #9e5858;
+}
+.modify-actor-details-page-text {
+  font-style: normal;
+  margin-top: var(--dl-space-space-unit);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.modify-actor-details-page-container1 {
+  width: 0px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.modify-actor-details-page-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.modify-actor-details-page-text1 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.modify-actor-details-page-textinput {
+  width: 379px;
+  height: 46px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.modify-actor-details-page-container3 {
+  width: 0px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.modify-actor-details-page-container4 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.modify-actor-details-page-text2 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.modify-actor-details-page-textinput1 {
+  width: 379px;
+  height: 46px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.modify-actor-details-page-container5 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.modify-actor-details-page-button {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.modify-actor-details-page-button1 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.modify-actor-details-page-button2 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 56px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+@media(max-width: 991px) {
+  .modify-actor-details-page-feature-card {
+    width: 100%;
+  }
+}

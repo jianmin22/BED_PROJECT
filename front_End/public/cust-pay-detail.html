@@ -1,0 +1,303 @@
+<!-- Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CustPayDetail - Finbest</title>
+  <meta name="description" content="Description of the website" />
+  <meta property="og:title" content="CustPayDetail - Finbest" />
+  <meta property="og:description" content="Description of the website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <!--This is the head section-->
+  <!-- <style> ... </style> -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const tmpToken = localStorage.getItem('token');
+      if (tmpToken == null) {
+        alert('You are not logged in, please login to access the page!\nRedirecting you to the login page...');
+        window.location.assign('http://localhost:3001/login.html')
+      }
+      const role = localStorage.getItem('role');
+      if (tmpToken != null && role != 'customer') {
+        alert('Error: You are not a customer!');
+        window.location.assign('http://localhost:3001/home-for-admin.html')
+      }
+      if (tmpToken != null && role == 'customer') {
+        const userID = localStorage.getItem('id');
+        $.ajax({
+          headers: { 'authorization': 'Bearer ' + tmpToken },
+          url: ('http://localhost:8081/allCustomerPaymentCust/' + userID),
+          type: 'GET',
+          contentType: "application/json;charset=utf-8",
+          success: function (data) {
+            if (data != null && data.length != 0) {
+              let divOutput = '';
+              for (let i = 0; i < data.length; i++) {
+                divOutput +=
+                  `<div id="id" class="cust-pay-detail-feature-card">
+                  <h2 id="filmTitle" class="cust-pay-detail-text2">Film Title:&nbsp;${data[i].title}</h2>
+                  <span id="payAmt" class="cust-pay-detail-text3">
+                    <span>Payment Amount:&nbsp;${data[i].amount}</span>
+                    <br />
+                  </span>
+                  <span id="date" class="cust-pay-detail-text6">
+                    <span>Date:&nbsp;${data[i].payment_date}</span>
+                    <br />
+                  </span>
+                </div>`
+              }
+              $('#paymentOuput').html(divOutput);
+            } else {
+              let divOutput = `<div id="id" >
+                  <h3>-----No Results-----</h3>
+                      </div>`
+              $('#paymentOuput').html(divOutput);
+            }
+          },
+          error: function (xhr, textStatus, errorThrow) {
+            alert(xhr.responseText);
+          }
+        })
+
+
+        $('#search').click(function () {
+          // retrieve the value from the text boxes
+          const start_date = $('#startDate').val();
+          const end_date = $('#endDate').val();
+          if (start_date.length == 0 || end_date.length == 0) {
+            alert('Please fill in both start and end date to search!');
+          } else {
+            const dataObj1 = {
+              start_date: start_date,
+              end_date: end_date,
+            }
+            const data1 = JSON.stringify(dataObj1);
+            // send http request
+            $.ajax({
+              headers: { 'authorization': 'Bearer ' + tmpToken },
+              url: ('http://localhost:8081/customerPayment/' + userID),
+              type: "POST",
+              contentType: "application/json;charset=utf-8",
+              dataType: "json",
+              data: data1,
+              success: function (data) {
+                if (data != null && data.length != 0) {
+                  let divOutput = '';
+                  for (let i = 0; i < data.length; i++) {
+                    divOutput +=
+                      `<div id="id" class="cust-pay-detail-feature-card">
+                  <h2 id="filmTitle" class="cust-pay-detail-text2">Film Title:&nbsp;${data[i].title}</h2>
+                  <span id="payAmt" class="cust-pay-detail-text3">
+                    <span>Payment Amount:&nbsp;${data[i].amount}</span>
+                    <br />
+                  </span>
+                  <span id="date" class="cust-pay-detail-text6">
+                    <span>Date:&nbsp;${data[i].payment_date}</span>
+                    <br />
+                  </span>
+                </div>`
+                  }
+                  $('#paymentOuput').html(divOutput);
+                } else {
+                  let divOutput = `<div id="id" >
+                  <h3>-----No Results-----</h3>
+                      </div>`
+                  $('#paymentOuput').html(divOutput);
+                }
+              },
+              error: function (xhr, textStatus, errorThrow) {
+                alert(xhr.responseText);
+              }
+            })
+          }
+
+          return false; //prevent loading of the page
+        })
+
+
+        $('#logout').click(function () {
+          window.localStorage.clear();
+          alert('Log Out Successfully!')
+          window.location.assign('http://localhost:3001/home.html')
+
+        })
+
+        $('#home').click(function () {
+          window.location.assign('http://localhost:3001/home-for-cust.html')
+        })
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <div>
+    <link href="./css/cust-pay-detail.css" rel="stylesheet" />
+    <div class="cust-pay-detail-container">
+      <div class="cust-pay-detail-container1">
+        <header data-thq="thq-navbar" class="cust-pay-detail-navbar-interactive">
+          <div data-thq="thq-navbar-nav" data-role="Nav" class="cust-pay-detail-desktop-menu">
+            <nav data-thq="thq-navbar-nav-links" data-role="Nav" class="cust-pay-detail-nav">
+              <button class="cust-pay-detail-button button" id="home">HOME</button>
+              <button id="paymentDetails" class="cust-pay-detail-button1 button">
+                Previous Payment Details
+              </button>
+            </nav>
+          </div>
+          <div data-thq="thq-navbar-btn-group" class="cust-pay-detail-btn-group">
+            <button id="logout" class="cust-pay-detail-login button">
+              LOGOUT
+            </button>
+          </div>
+        </header>
+      </div>
+      <div class="cust-pay-detail-container2">
+        <div class="cust-pay-detail-container3">
+          <div class="cust-pay-detail-container4">
+            <div class="cust-pay-detail-container5">
+              <span class="cust-pay-detail-text">Start Date: </span>
+              <input type="date" id="startDate" class="cust-pay-detail-textinput input" />
+            </div>
+            <span class="cust-pay-detail-text1">End Date: </span>
+          </div>
+        </div>
+        <input type="date" id="endDate" class="cust-pay-detail-textinput1 input" />
+        <div class="cust-pay-detail-container6">
+          <div class="cust-pay-detail-container7">
+            <button id="search" class="cust-pay-detail-button2 button">
+              SEARCH
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="paymentOuput">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

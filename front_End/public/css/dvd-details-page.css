@@ -1,0 +1,73 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.dvd-details-page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.dvd-details-page-feature-card {
+  width: 710px;
+  height: 100%;
+  padding: var(--dl-space-space-twounits);
+  align-self: center;
+  align-items: center;
+  border-color: var(--dl-color-gray-black);
+  border-width: 2px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 20px 30px #9e5858;
+}
+.dvd-details-page-text {
+  align-self: center;
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  background-color: white;
+}
+.dvd-details-page-text01 {
+  color: var(--dl-color-gray-700);
+  align-self: flex-start;
+  text-align: flex-start;
+  background-color: white;
+}
+.dvd-details-page-text04 {
+  color: var(--dl-color-gray-700);
+  align-self: flex-start;
+  text-align: flex-start;
+  background-color: white;
+}
+.dvd-details-page-text07 {
+  color: var(--dl-color-gray-700);
+  align-self: flex-start;
+  text-align: flex-start;
+  background-color: white;
+}
+.dvd-details-page-text10 {
+  color: var(--dl-color-gray-700);
+  align-self: flex-start;
+  text-align: flex-start;
+  background-color: white;
+}
+.dvd-details-page-text13 {
+  color: var(--dl-color-gray-700);
+  align-self: flex-start;
+  text-align: flex-start;
+  background-color: white;
+}
+.dvd-details-page-button {
+  width: var(--dl-size-size-medium);
+  height: var(--dl-size-size-small);
+  align-self: flex-end;
+  text-align: center;
+}
+@media(max-width: 991px) {
+  .dvd-details-page-feature-card {
+    width: 100%;
+  }
+}

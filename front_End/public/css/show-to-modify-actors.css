@@ -1,0 +1,268 @@
+/* Name: Soh Jian Min
+Class: DIT/FT/1B/04
+Admission Number: 2238856 */
+.show-to-modify-actors-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.show-to-modify-actors-container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.show-to-modify-actors-navbar-interactive {
+  width: 100%;
+  height: 124px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 2px;
+}
+.show-to-modify-actors-desktop-menu {
+  display: flex;
+}
+.show-to-modify-actors-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.show-to-modify-actors-button {
+  color: #000000;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+  background-color: #ffffff;
+}
+.show-to-modify-actors-button1 {
+  color: #ffffff;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+  background-color: #9e5858;
+}
+.show-to-modify-actors-button2 {
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+}
+.show-to-modify-actors-button3 {
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 10px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+}
+.show-to-modify-actors-btn-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.show-to-modify-actors-login {
+  color: rgb(255, 255, 255);
+  height: var(--dl-size-size-small);
+  align-self: stretch;
+  text-align: center;
+  padding-top: 14px;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.show-to-modify-actors-button4 {
+  color: #ffffff;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 300px;
+  padding-top: 14px;
+  border-color: #9e5858;
+  border-radius: 0px;
+  background-color: #9e5858;
+}
+.show-to-modify-actors-container2 {
+  width: 1219px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.show-to-modify-actors-container3 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.show-to-modify-actors-text {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.show-to-modify-actors-textinput {
+  width: 200px;
+  height: 53px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.show-to-modify-actors-button5 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  height: 53px;
+  background-color: rgb(158, 88, 88);
+}
+.show-to-modify-actors-container4 {
+  width: 593px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  justify-content: center;
+}
+.show-to-modify-actors-container5 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+.show-to-modify-actors-text01 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 100px;
+}
+.show-to-modify-actors-text02 {
+  font-size: 20px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 70px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+.show-to-modify-actors-textinput1 {
+  width: 200px;
+  height: 53px;
+  align-self: flex-start;
+  margin-top: 50px;
+  text-align: left;
+  margin-left: 20px;
+}
+.show-to-modify-actors-button6 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 0px;
+  height: 53px;
+  background-color: rgb(158, 88, 88);
+}
+.show-to-modify-actors-feature-card {
+  width: 777px;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  max-width: var(--dl-size-size-maxwidth);
+  margin-top: 30px;
+  align-items: flex-start;
+  margin-left: 50px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  margin-right: 50px;
+  border-radius: var(--dl-radius-radius-radius4);
+  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.show-to-modify-actors-text03 {
+  margin-bottom: var(--dl-space-space-unit);
+}
+.show-to-modify-actors-button7 {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  align-self: flex-end;
+  font-style: normal;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  margin-left: 15px;
+  border-radius: 0px;
+  background-color: rgb(158, 88, 88);
+}
+.show-to-modify-actors-text04 {
+  color: var(--dl-color-gray-700);
+}
+.show-to-modify-actors-text07 {
+  color: var(--dl-color-gray-700);
+  margin-top: 5px;
+}
+.show-to-modify-actors-text10 {
+  color: var(--dl-color-gray-700);
+  margin-top: 5px;
+}
+@media(max-width: 767px) {
+  .show-to-modify-actors-navbar-interactive {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .show-to-modify-actors-desktop-menu {
+    display: none;
+  }
+  .show-to-modify-actors-btn-group {
+    display: none;
+  }
+}
+@media(max-width: 479px) {
+  .show-to-modify-actors-navbar-interactive {
+    padding: var(--dl-space-space-unit);
+  }
+  .show-to-modify-actors-text03 {
+    font-style: normal;
+    font-weight: 600;
+  }
+}
